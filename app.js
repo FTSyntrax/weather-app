@@ -17,10 +17,10 @@ window.addEventListener('load', () => {
 
             // In case of CORS/localhost usage (must visit the site to temporarily unlock demo access )
                 //const proxy = 'https://cors-anywhere.herokuapp.com/';
-                //const api = `${proxy}http://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${lat},${long}&days=3&aqi=yes&alerts=yes`;
+                //const api = `${proxy}https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${lat},${long}&days=3&aqi=yes&alerts=yes`;
             // End of CORS fix
 
-            const api = `http://api.weatherapi.com/v1/forecast.json?key=49a62e3f2aad48b0b80190936212206&q=${lat},${long}&days=${days}&aqi=${aqi}&alerts=no`;
+            const api = `https://api.weatherapi.com/v1/forecast.json?key=49a62e3f2aad48b0b80190936212206&q=${lat},${long}&days=${days}&aqi=${aqi}&alerts=no`;
             fetch(api).then(res => {
                 return res.json();
             }).then(data => {
